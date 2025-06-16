@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>about</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Darumadrop+One&family=Pacifico&display=swap" rel="stylesheet" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400..800&family=Darumadrop+One&family=Gruppo&family=Pacifico&display=swap" rel="stylesheet" />
+
+    <style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body, html {
+    font-family: sans-serif;
+    height: 100%;
+    background-color: #f5faff;
+  }
+
+  /* ===== 상단 네비게이션 ===== */
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background-color: rgba(133, 186, 234, 0.85);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    z-index: 100;
+    backdrop-filter: blur(5px);
+  }
+
+  .logo {
+    font-family: 'Darumadrop One', sans-serif;
+    font-size: 26px;
+    color: white;
+    font-weight: bold;
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+  }
+
+  nav ul li a {
+    font-family: 'Baloo Bhaijaan 2', 'Darumadrop One', 'Gruppo', 'Pacifico', sans-serif;
+    font-size: 16px; /* cafe.html과 동일하게 설정 */
+    color: white;
+    text-decoration: none;
+  }
+
+  nav ul li a:hover {
+    text-decoration: underline;
+  }
+
+  /* 본문 영역 */
+  .about-container {
+    display: flex;
+    height: calc(100vh - 70px);
+    margin-top: 70px;
+  }
+
+  .about-container img {
+    width: 50vw;
+    height: 100%;
+    object-fit: cover;
+    flex-shrink: 0;
+    display: block;
+  }
+
+  .about-text {
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 40px 40px 80px;
+    text-align: center;
+    color: rgb(133, 186, 234);
+    font-size: 18px;
+    line-height: 1.8;
+  }
+
+  /* 반응형 */
+  @media (max-width: 768px) {
+    .about-container {
+      flex-direction: column;
+      height: auto;
+      margin-top: 70px;
+    }
+
+    .about-container img,
+    .about-text {
+      width: 100%;
+      height: auto;
+      padding: 20px;
+    }
+
+    .about-text {
+      text-align: center;
+    }
+  }
+</style>
+
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">neoh</div>
+      <ul>
+        <li><a href="cafe.html">home</a></li>
+        <li><a href="cafe.html#storyArea">story</a></li>
+        <li><a href="cafe.html#drinkArea">menu</a></li>
+        <li><a href="cafe.html#formArea">form</a></li>
+        <li><a href="guestbook.html">guestbook</a></li>
+        <li><a href="about.html">about</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="about-container">
+      <img src="IMG_0744.jpeg" alt="neoh 내부 사진" />
+      <div class="about-text">
+        <p>
+          ˚₊‧꒰ა안녕하세요, 너흐(neoh)입니다໒꒱ ‧₊˚<br><br>
+          '너흐'는 제주 방언으로 '여유'를 의미합니다.<br>
+          커피와 디저트뿐만 아니라 멋진 가구들도 함께 즐기실 수 있는 공간으로,<br>
+          제주의 온전한 여유를 선물해 드리려 항상 노력 중입니다.<br><br>
+          너흐에서 머무르시는 동안만큼은 온전한 여유를 보내시길 바랍니다.𓂃 ଓ ․ 𓈒
+        </p>
+      </div>
+    </div>
+
+        
+  </main>
+</body>
+</html>
+
+
