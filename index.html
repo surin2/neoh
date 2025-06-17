@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>neoh</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Darumadrop+One&family=Pacifico&display=swap" rel="stylesheet" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400..800&family=Darumadrop+One&family=Gruppo&family=Pacifico&display=swap" rel="stylesheet" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    h3 {
+  font-family: 'Baloo Bhaijaan 2', cursive, sans-serif;
+}
+nav ul li a {
+  font-family: 'Baloo Bhaijaan 2', 'Darumadrop One', 'Gruppo', 'Pacifico', sans-serif;
+}
+
+
+
+    body, html {
+      font-family: sans-serif;
+      height: 100%;
+    }
+
+    /* ===== 상단 네비게이션 ===== */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 70px;
+      background-color: rgba(133, 186, 234, 0.85); /* 반투명으로 수정 */
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 30px;
+      z-index: 100;
+      backdrop-filter: blur(5px); /* 배경 흐림 효과 */
+    }
+    .logo {
+  font-family: 'Darumadrop One', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+    .logo {
+      font-size: 26px;
+      color: white;
+      font-weight: bold;
+    }
+
+    ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+    }
+
+    ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    ul li a:hover {
+      text-decoration: underline;
+    }
+
+    /* 홈 영역*/
+   
+    #homeArea h1 {
+      font-family: 'Darumadrop One', sans-serif;
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    #homeArea h1 {
+  font-size: 100px !important;
+}
+
+    #homeArea {
+      height: 100vh;
+      margin-top: 70px;
+      background-image: url('너흐1.jpg.jpeg');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+    }
+
+    #homeArea h1 {
+      font-size: 64px;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    #homeArea p {
+      font-size: 20px;
+      text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.4);
+    }
+
+    /*Story 영역*/
+    #storyArea {
+      background-color: white;
+      color: rgb(133, 186, 234);
+      padding: 80px 40px;
+      text-align: center;
+    }
+
+    #storyArea h3 {
+      font-size: 28px;
+      margin-bottom: 15px;
+      margin-top: 60px;
+    }
+
+    #storyArea p {
+      font-size: 18px;
+      line-height: 1.6;
+      margin-bottom: 50px;
+    }
+
+
+    .between-image-container{
+      width: 100vw;
+      margin: 0;
+      padding: 0;
+    }
+    .between-image-container img {
+      width: 100vw;
+      height: 10px;
+      height: auto;
+      display: block;
+    }
+    /*약속*/
+    #noticeArea {
+  background-color: #eaf4ff;
+  color: rgb(133, 186, 234);
+  padding: 60px 30px;
+  text-align: center;
+  border-radius: 20px;
+  margin: 40px auto 20px auto;
+  margin-bottom: 20px;
+  width: calc(100% - 100px);
+  max-width: 1780px;
+}
+
+#noticeArea h3 {
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+.notice-item {
+  background-color: white;
+  color: rgb(133, 186, 234);
+  border-radius: 20px;
+  padding: 8px 16px; 
+  margin: 14px auto;
+  max-width: 800px;
+  font-size: 14px; 
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+  height: 40px; 
+}
+
+
+    /* Drink */
+    #drinkArea {
+      padding: 60px;
+      background-color: rgb(255, 255, 255);
+      color: rgb(133, 186, 234);
+      text-align: center;
+      margin-top: 0;
+      width: 100%;
+    }
+
+    #drinkArea h3 {
+      font-size: 28px;
+      margin-bottom: 30px;
+      margin-top: 0;
+      border-top: 1.6px solid rgb(133, 186, 234);
+      border-bottom: 1.6px solid rgb(133, 186, 234);
+      display: inline-block;
+      padding: 10px 16px;
+      font-weight: 700;
+      color: rgb(133, 186, 234);
+    }
+
+       /* 디저트 */
+    #dessertsArea {
+      padding: 60px;
+      background-color: rgb(255, 255, 255);
+      color: rgb(133, 186, 234);
+      text-align: center;
+      margin-top: 0;
+      width: 100%;
+    }
+
+    #dessertsArea h3 {
+      font-size: 28px;
+      margin-bottom: 34px;
+      margin-top: 0;
+      border-top: 1.6px solid rgb(133, 186, 234);
+      border-bottom: 1.6px solid rgb(133, 186, 234);
+      display: inline-block;
+      padding: 10px 16px;
+      font-weight: 700;
+      color: rgb(133, 186, 234);
+    }
+
+    .menu-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px 40px;
+      text-align: left;
+    }
+
+    .menu-item {
+      width: 180px;
+    }
+
+    .menu-item img {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 6px;
+    }
+
+    .menu-name {
+      text-align: left;
+      font-size: 16px;
+      color: rgb(133, 186, 234);
+      margin-bottom: 20px;
+    }
+
+    /*지도*/
+
+    #formArea {
+  background-color: #eaf4ff;
+  padding: 60px 20px;
+  color: rgb(133, 186, 234);
+}
+
+.form-layout {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* 공통 박스 스타일 */
+.info-box {
+  background-color: white;
+  border-radius: 18px;
+  padding: 30px 24px;
+  flex: 1 1 460px;
+  min-width: 300px;
+  box-shadow: 0 4px 12px rgba(133, 186, 234, 0.15);
+}
+
+/* 제목 공통 */
+.info-title {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 16px;
+  text-align: center;
+  color: rgb(133, 186, 234);
+}
+
+/* 운영시간 */
+.hours-info {
+  font-size: 16px;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.hours-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 15px;
+}
+
+.hours-table td {
+  padding: 8px 12px;
+  border: 1px solid #cbe2f7;
+  text-align: center;
+  background-color: #f9fcff;
+}
+
+/* 지도 */
+.map-box iframe {
+  width: 100%;
+  height: 250px;
+  border: none;
+  border-radius: 12px;
+  margin-top: 10px;
+}
+
+.address-text {
+  font-size: 14px;
+  text-align: center;
+}
+
+/* 반응형 */
+@media (max-width: 768px) {
+  .form-layout {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .info-box {
+    width: 100%;
+  }
+}
+
+/* 반응형 */
+@media (max-width: 768px) {
+  .form-layout {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .hours-box, .map-box {
+    width: 100%;
+  }
+}
+
+
+    /* 반응형 */
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        height: auto;
+        padding: 15px;
+      }
+
+      ul {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      #homeArea h1 {
+        font-size: 40px;
+      }
+
+      #homeArea p {
+        font-size: 16px;
+      }
+
+      .image-row {
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .image-row img {
+        width: 80%;
+        max-width: 300px;
+      }
+
+      .menu-container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .menu-item {
+        width: 80%;
+        max-width: 300px;
+      }
+
+      .menu-name {
+        text-align: center;
+      }
+
+      #drinkArea h3 {
+        padding: 10px 40px;
+      }
+    }
+
+    html {scroll-behavior: smooth;}
+
+    /* 마지막 */
+    #contact {
+  
+  padding: 10px 40px;
+  text-align: right;
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  border-top: 1.8px solid rgb(133, 186, 234);
+  border-bottom: 1.8px solid rgb(133, 186, 234);
+}
+
+.contact-info {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.phone {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+   color: rgb(133, 186, 234);
+}
+
+.phone a {
+  color: rgb(133, 186, 234);
+  text-decoration: none;
+}
+
+.phone a:hover {
+  text-decoration: underline;
+}
+
+.instagram-link img {
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  vertical-align: middle;
+  transition: transform 0.2s ease;
+
+}
+
+.instagram-link img:hover {
+  transform: scale(1.1);
+  filter: none;
+}
+.between-image-container {
+  position: relative;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+}
+
+.between-image-container img {
+  width: 100vw;
+  height: auto;
+  display: block;
+}
+
+.between-image-container .overlay-text {
+  position: absolute;
+  top: 50%;          
+  left: 50%;         
+  transform: translate(-50%, -50%);
+  color: white;     
+  font-size: 18px;
+  white-space: nowrap;
+  pointer-events: none; 
+}
+.hours-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* 요소 간 간격 */
+  font-size: 16px;
+}
+
+.time-part {
+  white-space: nowrap;
+}
+
+.divider {
+  width: 2px;
+  height: 16px;
+  background-color: rgb(133, 186, 234);
+  opacity: 0.6;
+}
+
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <div class="logo">neoh</div>
+      <ul>
+        <li><a href="cafe.html">home</a></li>
+        <li><a href="#storyArea">story</a></li>
+        <li><a href="#drinkArea">menu</a></li>
+        <li><a href="#formArea">form</a></li>
+        <li><a href="guestbook.html">guestbook</a></li>
+        <li><a href="about.html">about</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="homeArea">
+      <h1>neoh</h1>
+      <p>˚₊‧꒰ა 고요하고 여유로운 공간 ໒꒱ ‧₊˚</p>
+    </section>
+
+
+    <section id="storyArea">
+      <h3>✽ neoh story ✽</h3>
+      <p>
+        '너흐'는 제주어로 '여유'를 의미합니다. <br>
+        너흐에 머무르시는 모든 분들이 온전한 여유를 선물받으셨길 바랍니다.
+      </p>
+    </section>
+
+    <section id="noticeArea">
+      <h3>✉</h3>
+      <div class="notice-item">
+        공간이 협소하여 &nbsp;<b>카메라 셔터음</b>&nbsp;이 크게 울립니다. 촬영 시&nbsp; <b>라이브 모드 사용</b>&nbsp;부탁드립니다 ᰔ
+      </div>
+      <div class="notice-item"><b>상업적 촬영</b>&nbsp;은 대관 이용 시에만 가능하니,&nbsp; <b>미리 문의 연락</b> &nbsp;부탁드립니다.</div>
+      <div class="notice-item">
+       <b> 너흐의 모든 가구는 판매 중인 제품입니다.</b>&nbsp;
+        테이블 간 가구 이동은 지양하고있으며,&nbsp;
+        <b>모두 소중하게 다뤄주시면 감사하겠습니다.</b>
+      </div>
+      <div class="notice-item">
+        <b>노키즈</b>&nbsp;,&nbsp;<b>노펫존</b>&nbsp;입니다 ෆ ͙˚˖(실내외 모두 10세이상 가능)</div>
+        <div class="notice-item">모두가 고요한 여유를 느낄 수 있는 공간을 지향하고있어,&nbsp;<b>노트북 사용은 지양</b>&nbsp;해주시면 감사하겠습니다.</div>
+      <div class="notice-item">
+        자리에서 미뉴판을 천천히 보신 후
+        카운터에서 &nbsp;<b>1인 1음료</b> &nbsp;주문 부탁드립니다(˶• ֊ •˶)
+      </div>
+    </section>
+
+    <div class="between-image-container">
+      <img src="추가이미지.jpeg" alt="추가 이미지" />
+      <p class="overlay-text">˚₊‧꒰ა 너흐의 모든 디저트는 매장에서 매일 직접 만들고 있습니다 ໒꒱ ‧₊˚</p>
+    </div>
+    
+
+
+    <section id="drinkArea">
+      <h3>ʚDrinks menuɞ</h3>
+      <div class="menu-container">
+        <div class="menu-item">
+          <img src="아메리카노.jpeg" alt="아메리카노">
+          <p class="menu-name">아메리카노</p>
+        </div>
+        <div class="menu-item">
+          <img src="너흐라떼.jpg" alt="너흐라떼">
+          <p class="menu-name">너흐라떼</p>
+        </div>
+        <div class="menu-item">
+          <img src="우도라떼.jpg" alt="우도라떼">
+          <p class="menu-name">우도라떼</p>
+        </div>
+        <div class="menu-item">
+          <img src="바닐라빈소다.jpg" alt="바닐라빈소다">
+          <p class="menu-name">바닐라빈소다</p>
+        </div>
+        <div class="menu-item">
+          <img src="너흐 아이스티.jpg" alt="너흐 아이스티">
+          <p class="menu-name">너흐 아이스티</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="dessertsArea">
+      <h3>ʚDesserts menuɞ</h3>
+      <div class="menu-container">
+        <div class="menu-item">
+          <img src="바닐라밀푀유.jpg.jpeg" alt="바닐라밀푀유">
+          <p class="menu-name">바닐라밀푀유</p>
+        </div>
+        <div class="menu-item">
+          <img src="쇼콜라밀푀뷰.jpg.jpg" alt="쇼콜라밀푀유">
+          <p class="menu-name">쇼콜라밀푀뷰</p>
+        </div>
+        <div class="menu-item">
+          <img src="제주말차 컵케이크.jpg" alt="제주말차">
+          <p class="menu-name">제주말차 컵케익</p>
+        </div>
+        <div class="menu-item">
+          <img src="구좌당근 컵케익.jpeg" alt="구좌당근">
+          <p class="menu-name">구좌당근 컵케익</p>
+        </div>
+        <div class="menu-item">
+          <img src="레드벨벳 컵케익.jpg" alt="레드벨벳">
+          <p class="menu-name">레드벨벳 컵케익</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="formArea">
+  <div class="form-layout">
+
+    <!-- ✽ Time ✽ 박스 -->
+    <div class="info-box time-box">
+      <h4 class="info-title">✽ Time ✽</h4>
+      <p class="hours-info">
+        <span class="time-part">영업시간:11:00 - 18:00</span>
+        <span class="divider"></span>
+        <span class="time-part">라스트 오더:17:00</span>
+      </p>
+      <table class="hours-table">
+        <tbody>
+          <tr><td>월</td><td>11:00 - 18:00</td></tr>
+          <tr><td>화</td><td><strong>정기휴무</strong></td></tr>
+          <tr><td>수</td><td><strong>정기휴무</strong></td></tr>
+          <tr><td>목</td><td>11:00 - 18:00</td></tr>
+          <tr><td>금</td><td>11:00 - 18:00</td></tr>
+          <tr><td>토</td><td>11:00 - 18:00</td></tr>
+          <tr><td>일</td><td>11:00 - 18:00</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- ✽ location ✽ 박스 -->
+    <div class="info-box map-box">
+      <h4 class="info-title">✽ location ✽</h4>
+      <p class="address-text">제주 서귀포시 대정읍 무릉인향로14번길 20</p>
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3335.558329581527!2d126.24381617530638!3d33.27805337345824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x350c69b68ec005ab%3A0xcbe4669cd7635b2c!2z64SI7Z2QKE5lb2gp!5e0!3m2!1sko!2skr!4v1750007152037!5m2!1sko!2skr" 
+        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+
+  </div>
+</section>
+
+
+
+    <section id="contact">
+  <div class="contact-info">
+    <p class="phone">
+      ☎<a href="tel:050713851124">0507-1385-1124</a>
+      <a class="instagram-link" href="https://www.instagram.com/neoh_jeju" target="_blank">
+        <img src="인스타.png" alt="Instagram" />
+      </a>
+    </p>
+  </div>
+</section>
+  </main>
+
+</body>
+</html>
